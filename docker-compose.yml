@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+
+  webchat:
+    image: registry.gitlab.com/open-trip/web-chat-client
+
+    networks:
+      - web
+      - netdata
+    deploy:
+      replicas: 1
+      labels:
+        - "traefik.backend=web-chat"
+        - "traefik.docker.network=web"
+        - "traefik.frontend.rule=Host:chat.opentripapp.com;PathPrefix:/"
+        - "traefik.enable=true"
+        - "traefik.port=80"
+
+networks:
+  netdata:
+    external: true
+  web:
+    external: true
