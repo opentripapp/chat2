@@ -20,12 +20,11 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'manifest',  href: '/manifest.json' },
       { href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', rel: 'stylesheet'},
-      { href: '/css/qiscus-sdk.2.5.9.css', rel: 'stylesheet'},
+      { href: 'https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.5.11/qiscus-sdk.2.5.11.css', rel: 'stylesheet'},
       { href: '/css/roboto.css',rel:'stylesheet'}
     ],
     script:[
-      { src: '/js/emojione.min.js' },
-      { src: '/js/qiscus-sdk.2.5.9.js' }
+      { src: 'https://qiscus-sdk.s3-ap-southeast-1.amazonaws.com/web/v2.5.11/qiscus-sdk.2.5.11.js' }
     ]
   },
 

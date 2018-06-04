@@ -56,8 +56,8 @@
   }
 
   .qcw-room-avatar {
-    max-width: 40px;
-    max-height: 40px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     border-radius: 50%;
     top: 50%;
