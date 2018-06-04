@@ -107,6 +107,11 @@
           { hid: 'description', name: 'description', content: 'Login to opentrip web chat' }
         ]
       }
+    },
+    mounted(){
+      if(this.authenticated){
+        this.$nuxt.$router.push('/')
+      }
     }
   }
 
