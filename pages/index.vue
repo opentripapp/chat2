@@ -1,5 +1,5 @@
 <template>
-  <app v-loading.fullscreen.lock="loading"></app>
+  <app ></app>
 </template>
 
 
@@ -94,18 +94,11 @@
             },
           }
         });
-        setTimeout(()=>{
-          QiscusSDK.core.setUser(user.email.data, user.password, user.name,user.profile_picture);
-        },900)
+        QiscusSDK.core.setUser(user.email.data, user.password, user.name,user.profile_picture);
       }
     },
-    mounted(){
-      try{
-        this.init()
-      }catch(err){
-        this.init()
-      }
+    beforeMount(){
+      this.init()
     }
-
   }
 </script>
